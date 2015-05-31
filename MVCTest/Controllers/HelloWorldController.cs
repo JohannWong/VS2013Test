@@ -19,7 +19,7 @@ namespace MVCTest.Controllers
         // 
         // GET: /HelloWorld/Welcome/ 
 
-        public string Welcome(string name, int numTimes = 1)
+        public string Welcome(string name, int numTimes = 0)
         {
             return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes);
         } 
