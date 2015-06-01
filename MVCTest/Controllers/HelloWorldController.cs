@@ -11,17 +11,30 @@ namespace MVCTest.Controllers
         // 
         // GET: /HelloWorld/ 
 
-        public string Index()
+        //public string Index()
+        //{
+        //    return "This is my <b>default</b> action...";
+        //} 
+
+        public ActionResult Index()
         {
-            return "This is my <b>default</b> action...";
+            return View();
         }
 
         // 
         // GET: /HelloWorld/Welcome/ 
 
-        public string Welcome(string name, int numTimes = 0)
+        //public string Welcome(string name, int numTimes = 0)
+        //{
+        //    return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes);
+        //} 
+
+        public ActionResult Welcome(string name, int numTimes = 1)
         {
-            return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes);
-        } 
+            ViewBag.Message = "Hello " + name;
+            ViewBag.NumTimes = numTimes;
+
+            return View();
+        }
     }
 }
