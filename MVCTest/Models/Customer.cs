@@ -19,10 +19,10 @@ namespace MVCTest.Models
         public string Country { get; set; }
         public string Phone { get; set; }
         public string Fax { get; set; }
+    }
 
-        public class CustomerConn : DbContext
-        {
-            public DbSet<Customer> Customers { get; set; }
-        }
+    public class CustomerDbContext : DbContext
+    {
+        public DbSet<Customer> Customers { get; set; }
     }
 }
